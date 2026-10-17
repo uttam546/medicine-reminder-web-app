@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="premium-body">
+    <div class="premium-page-shell">
+        <header class="premium-header">
+            <div>
+                <span class="mini-label">Care overview</span>
+                <h1>Medicine Details</h1>
+            </div>
+            <nav class="premium-nav">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="health-status.html">Health Status</a>
+            </nav>
+        </header>
+
+        <main class="premium-content">
+            <section class="premium-card hero-panel-card">
+                <div class="card-topbar">
+                    <span class="status-dot blue"></span>
+                    <span class="status-dot green"></span>
+                    <span class="status-dot orange"></span>
+                </div>
+                <div class="card-header-row">
+                    <div>
+                        <p class="section-kicker">Medication schedule</p>
+                        <h2>All Medicines</h2>
+                    </div>
+                    <div id="medicineSummary" class="summary-badge">0 medicines</div>
+                </div>
+
+                <div class="table-wrap">
+                    <table id="allMedicineTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Dosage</th>
+                                <th>Time</th>
+                                <th>Food</th>
+                                <th>Days</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

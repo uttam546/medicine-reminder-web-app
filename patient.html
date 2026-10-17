@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="premium-body">
+    <main class="form-page-shell">
+        <header class="premium-header">
+            <div>
+                <span class="mini-label">Your personal care space</span>
+                <h1>Patient Details</h1>
+                <p class="page-intro">Add your details to personalize your medicine schedule.</p>
+            </div>
+            <a class="premium-back-link" href="medicine.html">Back</a>
+        </header>
+
+        <section class="premium-card patient-form-card">
+            <div class="form-card-heading">
+                <span class="form-icon" aria-hidden="true">+</span>
+                <div>
+                    <p class="section-kicker">Profile setup</p>
+                    <h2>About you</h2>
+                </div>
+            </div>
+
+            <div class="form-grid">
+                <label class="field-group field-wide" for="name">
+                    <span>Full name</span>
+                    <input type="text" id="name" placeholder="Enter patient name" autocomplete="name" required>
+                </label>
+                <label class="field-group" for="age">
+                    <span>Age</span>
+                    <input type="number" id="age" placeholder="Age (1–100)" min="1" max="100" required>
+                </label>
+                <label class="field-group" for="bloodGroup">
+                    <span>Blood group</span>
+                    <select class="blood-select" id="bloodGroup" required>
+                        <option value="" disabled selected>Select blood group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </label>
+                <label class="field-group field-wide" for="contact">
+                    <span>Emergency contact</span>
+                    <input type="tel" id="contact" placeholder="Enter a contact number" autocomplete="tel" required>
+                </label>
+            </div>
+
+            <div class="form-footer">
+                <p>Your details are saved in this browser on this device.</p>
+                <button class="start-btn" type="button" onclick="savePatient()">Continue to dashboard</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

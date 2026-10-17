@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="premium-body">
+    <main class="premium-page-shell">
+        <header class="premium-header">
+            <div>
+                <span class="mini-label">Your care at a glance</span>
+                <h1>Health Status</h1>
+                <p class="page-intro">A summary of your profile and medicine schedule.</p>
+            </div>
+            <nav class="premium-nav" aria-label="Main navigation">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="medicine-details.html">Medicine details</a>
+            </nav>
+        </header>
+
+        <section class="status-grid premium-status-grid">
+            <article class="premium-card status-card">
+                <div class="status-card-icon profile-icon" aria-hidden="true">P</div>
+                <p class="section-kicker">Your profile</p>
+                <h2>Patient details</h2>
+                <div class="status-detail-list">
+                    <p id="patientNameStatus">Name: --</p>
+                    <p id="patientAgeStatus">Age: --</p>
+                    <p id="patientBloodStatus">Blood Group: --</p>
+                </div>
+            </article>
+
+            <article class="premium-card status-card">
+                <div class="status-card-icon schedule-icon" aria-hidden="true">+</div>
+                <p class="section-kicker">Medicine schedule</p>
+                <h2>Adherence summary</h2>
+                <div class="status-detail-list">
+                    <p id="totalMedsCount">Total Medicines: 0</p>
+                    <p id="pendingMedsCount">Pending: 0</p>
+                    <p id="takenMedsCount">Taken: 0</p>
+                    <p id="missedMedsCount">Missed: 0</p>
+                </div>
+            </article>
+
+            <article class="premium-card status-card health-message-card">
+                <div class="status-card-icon health-icon" aria-hidden="true">✓</div>
+                <p class="section-kicker">Routine overview</p>
+                <h2>Today's summary</h2>
+                <p id="healthMessage">Loading medicine schedule summary...</p>
+                <p class="health-disclaimer">This summary tracks medicine reminders only and is not a medical assessment.</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

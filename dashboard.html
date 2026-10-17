@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="premium-body">
+    <main class="premium-page-shell dashboard-shell">
+        <header class="premium-header dashboard-header">
+            <div>
+                <span class="mini-label">Daily care, made simple</span>
+                <h1>Medicine Dashboard</h1>
+                <p id="welcome" class="page-intro">Welcome</p>
+            </div>
+            <nav class="premium-nav" aria-label="Main navigation">
+                <a href="medicine-details.html">Medicine details</a>
+                <a href="health-status.html">Health status</a>
+            </nav>
+        </header>
+
+        <div class="dashboard-grid">
+            <section class="premium-card dashboard-form-card">
+                <div class="form-card-heading">
+                    <span class="form-icon" aria-hidden="true">+</span>
+                    <div>
+                        <p class="section-kicker">Build your schedule</p>
+                        <h2>Add medicine</h2>
+                    </div>
+                </div>
+
+                <div class="field-stack">
+                    <label class="field-group" for="medName">
+                        <span>Medicine name</span>
+                        <input type="text" id="medName" placeholder="e.g. Vitamin D" required>
+                    </label>
+                    <label class="field-group" for="dose">
+                        <span>Dosage</span>
+                        <input type="text" id="dose" placeholder="e.g. 1 tablet" required>
+                    </label>
+                    <label class="field-group" for="medTime">
+                        <span>Reminder time</span>
+                        <input type="time" id="medTime" required>
+                    </label>
+                    <label class="field-group" for="food">
+                        <span>Food instructions</span>
+                        <select id="food" class="blood-select" required>
+                            <option value="">Before / after food</option>
+                            <option value="Before Food">Before Food</option>
+                            <option value="After Food">After Food</option>
+                        </select>
+                    </label>
+                    <label class="field-group" for="days">
+                        <span>Duration in days</span>
+                        <input type="number" id="days" placeholder="e.g. 7" min="1" required>
+                    </label>
+                </div>
+
+                <div class="button-row">
+                    <button class="start-btn" type="button" onclick="addMedicine()">Add medicine</button>
+                    <button class="toggle-btn" type="button" id="soundToggleBtn" onclick="toggleSound()">Sound: On</button>
+                </div>
+            </section>
+
+            <section class="premium-card schedule-card">
+                <div class="card-header-row">
+                    <div>
+                        <p class="section-kicker">Your routine</p>
+                        <h2>Today's medicines</h2>
+                    </div>
+                    <span class="summary-badge">Daily schedule</span>
+                </div>
+                <div class="table-wrap">
+                    <table id="medicineTable">
+                        <tr>
+                            <th>Name</th>
+                            <th>Time</th>
+                            <th>Dosage</th>
+                            <th>Status</th>
+                        </tr>
+                    </table>
+                </div>
+                <p class="schedule-note">Keep this page open to receive in-browser reminders at the scheduled time.</p>
+            </section>
+        </div>
+    </main>
+
+    <audio id="alarmSound" preload="auto">
+        <source src="alarmSound.aac" type="audio/aac">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
